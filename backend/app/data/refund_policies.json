@@ -1,0 +1,20 @@
+[
+    {
+        "reason": "Damaged Product",
+        "status": "Approved",
+        "refund_amount": 1299,
+        "policy": "Eligible under 7-Day Damage Policy"
+    },
+    {
+        "reason": "Wrong Item",
+        "status": "Approved",
+        "refund_amount": 1299,
+        "policy": "Wrong Item Replacement Policy"
+    },
+    {
+        "reason": "Changed Mind",
+        "status": "Rejected",
+        "refund_amount": 0,
+        "policy": "Change of Mind is not refundable"
+    }
+]
