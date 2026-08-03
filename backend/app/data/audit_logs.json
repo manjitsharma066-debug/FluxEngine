@@ -7,5 +7,50 @@
         "status": "Approved",
         "refund_amount": 1299,
         "timestamp": "2026-08-03T20:30:28"
+    },
+    {
+        "order_id": "ORD1001",
+        "customer": "Rahul Sharma",
+        "product": "Wireless Mouse",
+        "reason": "Damaged Product",
+        "status": "Approved",
+        "refund_amount": 1299,
+        "timestamp": "2026-08-03T20:54:51"
+    },
+    {
+        "order_id": "ORD1001",
+        "customer": "Rahul Sharma",
+        "product": "Wireless Mouse",
+        "reason": "Damaged Product",
+        "status": "Approved",
+        "refund_amount": 1299,
+        "timestamp": "2026-08-03T20:58:19"
+    },
+    {
+        "order_id": "ORD1001",
+        "customer": "Rahul Sharma",
+        "product": "Wireless Mouse",
+        "reason": "Damaged Product",
+        "status": "Approved",
+        "refund_amount": 1299,
+        "timestamp": "2026-08-03T21:15:53"
+    },
+    {
+        "order_id": "ORD1001",
+        "customer": "Rahul Sharma",
+        "product": "Wireless Mouse",
+        "reason": "Damaged Product",
+        "status": "Approved",
+        "refund_amount": 1299,
+        "timestamp": "2026-08-03T21:23:19"
+    },
+    {
+        "order_id": "ORD1001",
+        "customer": "Rahul Sharma",
+        "product": "Wireless Mouse",
+        "reason": "Damaged Product",
+        "status": "Approved",
+        "refund_amount": 1299,
+        "timestamp": "2026-08-03T21:29:10"
     }
 ]

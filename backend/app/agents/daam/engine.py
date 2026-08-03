@@ -1,4 +1,5 @@
 from app.agents.avil.router import AVILRouter
+from app.models.decision import DecisionResult
 
 
 class DAAMEngine:
@@ -6,19 +7,32 @@ class DAAMEngine:
     def __init__(self):
         self.router = AVILRouter()
 
-    def detect_domain(self, request):
+    def detect_intent(self, request):
 
-        """
-        Future:
-        - AI Classification
-        - Elastic Search
-        - Intent Detection
+        reason = request["reason"].lower()
 
-        Current MVP:
-        Always returns ecommerce.
-        """
+        refund_keywords = [
+            "refund",
+            "damaged",
+            "wrong",
+            "return"
+        ]
 
-        return "ecommerce"
+        for keyword in refund_keywords:
+
+            if keyword in reason:
+
+                return DecisionResult(
+                    intent="refund",
+                    domain="ecommerce",
+                    confidence=0.98
+                )
+
+        return DecisionResult(
+            intent="unknown",
+            domain="ecommerce",
+            confidence=0.50
+        )
 
     def process_refund(self, order_id, reason):
 
@@ -27,8 +41,10 @@ class DAAMEngine:
             "reason": reason
         }
 
-        domain = self.detect_domain(request)
+        decision = self.detect_intent(request)
 
-        adapter = self.router.get_adapter(domain)
+        adapter = self.router.get_adapter(
+            decision.domain
+        )
 
         return adapter.process(order_id, reason)

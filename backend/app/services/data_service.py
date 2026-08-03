@@ -1,18 +1,23 @@
 import json
-from pathlib import Path
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+from app.config.settings import (
+    ORDERS_FILE,
+    CUSTOMERS_FILE,
+    PRODUCTS_FILE,
+)
 
 
-def load_json(filename):
-    with open(DATA_DIR / filename, "r") as file:
+def load_json(file_path):
+    with open(file_path, "r") as file:
         return json.load(file)
 
 
 def get_order(order_id):
-    orders = load_json("orders.json")
+
+    orders = load_json(ORDERS_FILE)
 
     for order in orders:
+
         if order["order_id"] == order_id:
             return order
 
@@ -20,9 +25,11 @@ def get_order(order_id):
 
 
 def get_customer(customer_id):
-    customers = load_json("customers.json")
+
+    customers = load_json(CUSTOMERS_FILE)
 
     for customer in customers:
+
         if customer["customer_id"] == customer_id:
             return customer
 
@@ -30,9 +37,11 @@ def get_customer(customer_id):
 
 
 def get_product(product_id):
-    products = load_json("products.json")
+
+    products = load_json(PRODUCTS_FILE)
 
     for product in products:
+
         if product["product_id"] == product_id:
             return product
 
