@@ -52,5 +52,14 @@
         "status": "Approved",
         "refund_amount": 1299,
         "timestamp": "2026-08-03T21:29:10"
+    },
+    {
+        "order_id": "ORD1001",
+        "customer": "Rahul Sharma",
+        "product": "Wireless Mouse",
+        "reason": "Damaged Product",
+        "status": "Approved",
+        "refund_amount": 1299,
+        "timestamp": "2026-08-03T22:07:36"
     }
 ]
